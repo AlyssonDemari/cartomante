@@ -99,6 +99,23 @@ article{
         left: 0%;
         font-size: 1.5rem;  
     }
+
+    .star{
+        position: absolute;
+        top: 44%;
+        left: 50%;
+
+        @for $i from 1 through 10 {
+            .img-star#{$i} {
+                animation: pump 0.2s + $i * 0.2s ease-in-out infinite alternate;
+                position: absolute;
+                top: random(30) * 10px;
+                left: random(150) * 1px;
+                width: 30px;
+                height: random(10 * 10) 50px;
+            }
+        }
+    }
 }
 
 
@@ -133,6 +150,15 @@ article{
     }
     100% {
         transform:rotate(8deg) rotateY(360deg); 
+    }
+}
+
+@keyframes pump {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1.2);
     }
 }
 

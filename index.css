@@ -79,6 +79,91 @@ article .arroba {
   left: 0%;
   font-size: 1.5rem;
 }
+article .star {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+}
+article .star .img-star1 {
+  animation: pump 0.4s ease-in-out infinite alternate;
+  position: absolute;
+  top: 110px;
+  left: 71px;
+  width: 30px;
+  height: 72 50px;
+}
+article .star .img-star2 {
+  animation: pump 0.6s ease-in-out infinite alternate;
+  position: absolute;
+  top: 80px;
+  left: 147px;
+  width: 30px;
+  height: 13 50px;
+}
+article .star .img-star3 {
+  animation: pump 0.8s ease-in-out infinite alternate;
+  position: absolute;
+  top: 120px;
+  left: 130px;
+  width: 30px;
+  height: 95 50px;
+}
+article .star .img-star4 {
+  animation: pump 1s ease-in-out infinite alternate;
+  position: absolute;
+  top: 40px;
+  left: 99px;
+  width: 30px;
+  height: 49 50px;
+}
+article .star .img-star5 {
+  animation: pump 1.2s ease-in-out infinite alternate;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  width: 30px;
+  height: 38 50px;
+}
+article .star .img-star6 {
+  animation: pump 1.4s ease-in-out infinite alternate;
+  position: absolute;
+  top: 290px;
+  left: 91px;
+  width: 30px;
+  height: 67 50px;
+}
+article .star .img-star7 {
+  animation: pump 1.6s ease-in-out infinite alternate;
+  position: absolute;
+  top: 170px;
+  left: 47px;
+  width: 30px;
+  height: 74 50px;
+}
+article .star .img-star8 {
+  animation: pump 1.8s ease-in-out infinite alternate;
+  position: absolute;
+  top: 140px;
+  left: 17px;
+  width: 30px;
+  height: 38 50px;
+}
+article .star .img-star9 {
+  animation: pump 2s ease-in-out infinite alternate;
+  position: absolute;
+  top: 110px;
+  left: 1px;
+  width: 30px;
+  height: 68 50px;
+}
+article .star .img-star10 {
+  animation: pump 2.2s ease-in-out infinite alternate;
+  position: absolute;
+  top: 280px;
+  left: 108px;
+  width: 30px;
+  height: 98 50px;
+}
 
 @keyframes giro {
   0% {
@@ -111,5 +196,13 @@ article .arroba {
   }
   100% {
     transform: rotate(8deg) rotateY(360deg);
+  }
+}
+@keyframes pump {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1.2);
   }
 }/*# sourceMappingURL=index.css.map */
