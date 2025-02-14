@@ -6,41 +6,70 @@
   box-sizing: border-box;
   font-family: "Bodoni Moda SC", serif;
   font-size: 1rem;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
   background: linear-gradient(45deg, #26003f, #000000, #000000) no-repeat;
 }
 
-article {
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 99vw;
+  background-color: #FFF;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+}
+header nav p {
+  font-size: 2rem;
+  font-family: "Nixie One", cursive;
+}
+header nav ul {
+  display: flex;
+  gap: 40px;
+}
+header nav ul li {
+  font-family: "Nixie One", cursive;
+  font-size: 2rem;
+}
+
+.first {
   color: #FFF;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-article .welcome {
+.first .welcome {
   position: absolute;
   top: 20%;
   left: 5%;
 }
-article .welcome h1 {
+.first .welcome h1 {
   font-size: 2.5rem;
   width: 450px;
   text-align: center;
 }
-article .imgs {
+.first .imgs {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: flex-end;
 }
-article .imgs .cards {
+.first .imgs .cards {
   position: relative;
 }
-article .imgs .cards .card-1 {
+.first .imgs .cards .card-1 {
   transform: rotate(-8deg);
   position: absolute;
   top: 10%;
@@ -48,11 +77,11 @@ article .imgs .cards .card-1 {
   z-index: 0;
   animation: giro 3s linear infinite;
 }
-article .imgs .cards .card-2 {
+.first .imgs .cards .card-2 {
   z-index: 1;
   animation: giro2 3s linear infinite;
 }
-article .imgs .cards .card-3 {
+.first .imgs .cards .card-3 {
   transform: rotate(8deg);
   position: absolute;
   top: 10%;
@@ -60,109 +89,113 @@ article .imgs .cards .card-3 {
   animation: giro3 3s linear infinite;
   z-index: 0;
 }
-article .imgs .hand {
+.first .imgs .hand {
   width: 90%;
 }
-article .text {
+.first .text {
   position: absolute;
   top: 70%;
   left: 70%;
 }
-article .text p {
+.first .text p {
   font-size: 2.5rem;
   width: 450px;
   text-align: center;
 }
-article .arroba {
+.first .arroba {
   position: absolute;
   top: 95%;
   left: 0%;
   font-size: 1.5rem;
 }
-article .star {
+.first .star {
   position: absolute;
   top: 44%;
   left: 50%;
 }
-article .star .img-star1 {
+.first .star .img-star1 {
   animation: pump 0.4s ease-in-out infinite alternate;
   position: absolute;
-  top: 110px;
-  left: 71px;
+  top: 120px;
+  left: 30px;
   width: 30px;
-  height: 72 50px;
+  height: 30px;
 }
-article .star .img-star2 {
+.first .star .img-star2 {
   animation: pump 0.6s ease-in-out infinite alternate;
   position: absolute;
-  top: 80px;
-  left: 147px;
+  top: 250px;
+  left: 36px;
   width: 30px;
-  height: 13 50px;
+  height: 30px;
 }
-article .star .img-star3 {
+.first .star .img-star3 {
   animation: pump 0.8s ease-in-out infinite alternate;
   position: absolute;
-  top: 120px;
-  left: 130px;
-  width: 30px;
-  height: 95 50px;
-}
-article .star .img-star4 {
-  animation: pump 1s ease-in-out infinite alternate;
-  position: absolute;
-  top: 40px;
-  left: 99px;
-  width: 30px;
-  height: 49 50px;
-}
-article .star .img-star5 {
-  animation: pump 1.2s ease-in-out infinite alternate;
-  position: absolute;
-  top: 70px;
-  left: 20px;
-  width: 30px;
-  height: 38 50px;
-}
-article .star .img-star6 {
-  animation: pump 1.4s ease-in-out infinite alternate;
-  position: absolute;
-  top: 290px;
-  left: 91px;
-  width: 30px;
-  height: 67 50px;
-}
-article .star .img-star7 {
-  animation: pump 1.6s ease-in-out infinite alternate;
-  position: absolute;
-  top: 170px;
-  left: 47px;
-  width: 30px;
-  height: 74 50px;
-}
-article .star .img-star8 {
-  animation: pump 1.8s ease-in-out infinite alternate;
-  position: absolute;
-  top: 140px;
-  left: 17px;
-  width: 30px;
-  height: 38 50px;
-}
-article .star .img-star9 {
-  animation: pump 2s ease-in-out infinite alternate;
-  position: absolute;
-  top: 110px;
-  left: 1px;
-  width: 30px;
-  height: 68 50px;
-}
-article .star .img-star10 {
-  animation: pump 2.2s ease-in-out infinite alternate;
-  position: absolute;
-  top: 280px;
+  top: 260px;
   left: 108px;
   width: 30px;
-  height: 98 50px;
+  height: 30px;
+}
+.first .star .img-star4 {
+  animation: pump 1s ease-in-out infinite alternate;
+  position: absolute;
+  top: 170px;
+  left: 91px;
+  width: 30px;
+  height: 30px;
+}
+.first .star .img-star5 {
+  animation: pump 1.2s ease-in-out infinite alternate;
+  position: absolute;
+  top: 230px;
+  left: 75px;
+  width: 30px;
+  height: 30px;
+}
+.first .star .img-star6 {
+  animation: pump 1.4s ease-in-out infinite alternate;
+  position: absolute;
+  top: 160px;
+  left: 60px;
+  width: 30px;
+  height: 30px;
+}
+.first .star .img-star7 {
+  animation: pump 1.6s ease-in-out infinite alternate;
+  position: absolute;
+  top: 70px;
+  left: 66px;
+  width: 30px;
+  height: 30px;
+}
+.first .star .img-star8 {
+  animation: pump 1.8s ease-in-out infinite alternate;
+  position: absolute;
+  top: 170px;
+  left: 91px;
+  width: 30px;
+  height: 30px;
+}
+.first .star .img-star9 {
+  animation: pump 2s ease-in-out infinite alternate;
+  position: absolute;
+  top: 40px;
+  left: 64px;
+  width: 30px;
+  height: 30px;
+}
+.first .star .img-star10 {
+  animation: pump 2.2s ease-in-out infinite alternate;
+  position: absolute;
+  top: 150px;
+  left: 81px;
+  width: 30px;
+  height: 30px;
+}
+
+.second {
+  height: 100vh;
 }
 
 @keyframes giro {

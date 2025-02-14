@@ -15,16 +15,49 @@ $font-escri: 'Nixie One', cursive;
     box-sizing: border-box;
     font-family: $font;
     font-size: 1rem;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
     background: $bg no-repeat;
 }
 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 99vw;
+    background-color: #FFF;
 
-article{
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95vw;
+
+        p{
+            font-size: 2rem;
+            font-family: $font-escri;
+        }
+
+        ul{
+            display: flex;
+            gap: 40px;
+
+            li{
+                font-family: $font-escri;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
+.first{
     color: $white;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,10 +145,14 @@ article{
                 top: random(30) * 10px;
                 left: random(150) * 1px;
                 width: 30px;
-                height: random(10 * 10) 50px;
+                height: 30px;
             }
         }
     }
+}
+
+.second{
+    height: 100vh;
 }
 
 
