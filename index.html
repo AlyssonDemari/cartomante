@@ -10,7 +10,12 @@
 <body>
     <header>
         <nav>
-            <button>@KALLI_XXZZ</button>
+            <p><i class="fa-brands fa-instagram"></i><a target="_blank" href="https://www.instagram.com/kali.xxzz?igsh=bDQ5OW52ajlubmM3">@KALLI.XXZZ</a></p>
+            <div class="hamburger" id="hamburger">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
             <ul>
                 <li>Home</li>
                 <li>Como funciona?</li>
@@ -21,8 +26,34 @@
         </nav>
     </header>
     <main>
+        <div class="welcome">
+            <p>OLÁ, SEJEM BEM VINDOS!</p>
+        </div>
         <div class="center">
+            <div class="cards">
+                <img class="card1" src="images/card.png" alt="">
+                <img class="card2" src="images/card.png" alt="">
+                <img class="card3" src="images/card.png" alt="">
+            </div>
+            <img src="images/hands.png" alt="hands">
+        </div>
+        <div class="text">
+            <p>INFORMAÇÕES, MÉTODOS E VALORES DE TROCA</p>
         </div>
     </main>
+    <script>
+        const ul = document.querySelector('ul');
+        const hamburger = document.querySelector('.hamburger');
+
+    
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            if (ul.style.left === '50%') {
+                ul.style.left = '100%';
+            } else {
+                ul.style.left = '50%';
+            }
+        });
+    </script>
 </body>
 </html>
