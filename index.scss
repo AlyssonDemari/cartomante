@@ -25,6 +25,7 @@ header{
             padding: 5px 10px;
             border: 2px solid #FFF;
             transition: all 1s;
+            z-index: 0;
 
             i, a{
                 position: relative;
@@ -33,7 +34,7 @@ header{
                 font-family: $font-escri;
                 font-weight: 600;
                 margin: 0 5px;
-                z-index: 10;
+                z-index: 1;
             }
 
             &:hover{
@@ -62,17 +63,18 @@ header{
     }
 }
 
-main{
+.first{
     @include flex-center;
     height: 90vh;
-    border: 2px solid red;
 
     .center{
-        border: 2px solid rgb(51, 255, 0);
-
         @include flex-center;
         flex-direction: column;
         align-self: self-end;
+
+        .hand{
+            @include flex-center;
+        }
 
         .cards{
             .card1{
@@ -93,7 +95,6 @@ main{
     }
 
     .text, .welcome{
-                border: 2px solid rgb(51, 255, 0);
         margin: 50px;
         p{
             font-size: 2.5rem;
@@ -147,7 +148,7 @@ main{
             justify-content: space-between;
             padding:0px 20px 0px 0px;
             width: 100%;
-            z-index: 10;
+            z-index: 2;
 
             ul{
                 position: absolute;
@@ -158,7 +159,7 @@ main{
                 background-color: $white;
                 height: 100vh;
                 flex-direction: column;
-    
+                width: 50%;
                 transition: all 1s;
 
                 li{
@@ -169,15 +170,12 @@ main{
         }
     }
 
-    main{
-        background: blue;
+    .first{
         @include flex-center;
         flex-direction: column;
         justify-content: center;
 
         .center{
-            border: 2px solid rgb(51, 255, 0);
-    
             @include flex-center;
             flex-direction: column;
             align-self: center;
@@ -205,10 +203,22 @@ main{
                     width: 20%;    
                 }
             }
+
+            .hand{
+                @include flex-center;
+            }
         }
 
         .welcome, .text{
             align-self: center;
+
+            p{
+                display: flex;
+                justify-content: center;
+                font-size: 1.5rem;
+                text-align: center;
+                width: 100%;
+            }
         }        
     }
 }

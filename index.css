@@ -124,6 +124,7 @@ header nav p {
   padding: 5px 10px;
   border: 2px solid #FFF;
   transition: all 1s;
+  z-index: 0;
 }
 header nav p i, header nav p a {
   position: relative;
@@ -132,13 +133,14 @@ header nav p i, header nav p a {
   font-family: "Nixie One", cursive;
   font-weight: 600;
   margin: 0 5px;
-  z-index: 10;
+  z-index: 1;
 }
 header nav p:hover {
   border: 2px solid #26003f;
   border-radius: 20px;
   padding: 5px 10px;
   transition: all 1s;
+  cursor: pointer;
 }
 header nav ul {
   display: flex;
@@ -159,50 +161,53 @@ header nav ul li:hover {
   border-radius: 20px;
   padding: 5px 10px;
   transition: all 1s;
+  cursor: pointer;
 }
 
-main {
+.first {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 90vh;
-  border: 2px solid red;
 }
-main .center {
-  border: 2px solid rgb(51, 255, 0);
+.first .center {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   align-self: self-end;
 }
-main .center .cards .card1 {
+.first .center .hand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first .center .cards .card1 {
   transform: translate(10px, 10px) rotate(-10deg);
   animation: giro 3s linear infinite;
 }
-main .center .cards .card2 {
+.first .center .cards .card2 {
   transform: translate(0px, 0px) rotate(0deg);
   z-index: 1;
   animation: giro2 3s linear infinite;
 }
-main .center .cards .card3 {
+.first .center .cards .card3 {
   transform: translate(-10px, 10px) rotate(10deg);
   animation: giro3 3s linear infinite;
 }
-main .text, main .welcome {
-  border: 2px solid rgb(51, 255, 0);
+.first .text, .first .welcome {
   margin: 50px;
 }
-main .text p, main .welcome p {
+.first .text p, .first .welcome p {
   font-size: 2.5rem;
   width: 450px;
   color: #FFF;
   text-align: center;
 }
-main .welcome {
+.first .welcome {
   align-self: self-start;
 }
-main .text {
+.first .text {
   align-self: self-end;
 }
 
@@ -324,7 +329,7 @@ main .text {
     justify-content: space-between;
     padding: 0px 20px 0px 0px;
     width: 100%;
-    z-index: 10;
+    z-index: 2;
   }
   header nav ul {
     position: absolute;
@@ -335,51 +340,62 @@ main .text {
     background-color: #FFF;
     height: 100vh;
     flex-direction: column;
+    width: 50%;
     transition: all 1s;
   }
   header nav ul li {
     text-align: center;
     font-size: 1.2rem;
   }
-  main {
-    background: blue;
+  .first {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     justify-content: center;
   }
-  main .center {
-    border: 2px solid rgb(51, 255, 0);
+  .first .center {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     align-self: center;
   }
-  main .center img {
+  .first .center img {
     width: 50%;
   }
-  main .center .cards {
+  .first .center .cards {
     display: flex;
     align-items: center;
     justify-content: center;
     align-items: center;
   }
-  main .center .cards .card1 {
+  .first .center .cards .card1 {
     transform: translate(10px, 10px) rotate(-10deg);
   }
-  main .center .cards .card2 {
+  .first .center .cards .card2 {
     transform: translate(0px, 0px) rotate(0deg);
     z-index: 1;
   }
-  main .center .cards .card3 {
+  .first .center .cards .card3 {
     transform: translate(-10px, 10px) rotate(10deg);
   }
-  main .center .cards img {
+  .first .center .cards img {
     width: 20%;
   }
-  main .welcome, main .text {
+  .first .center .hand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .first .welcome, .first .text {
     align-self: center;
+  }
+  .first .welcome p, .first .text p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
   }
 }/*# sourceMappingURL=index.css.map */

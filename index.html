@@ -26,20 +26,27 @@
         </nav>
     </header>
     <main>
-        <div class="welcome">
-            <p>OLÁ, SEJEM BEM VINDOS!</p>
-        </div>
-        <div class="center">
-            <div class="cards">
-                <img class="card1" src="images/card.png" alt="">
-                <img class="card2" src="images/card.png" alt="">
-                <img class="card3" src="images/card.png" alt="">
+        <article class="first">
+            <div class="welcome">
+                <p>OLÁ, SEJAM BEM VINDOS!</p>
             </div>
-            <img src="images/hands.png" alt="hands">
-        </div>
-        <div class="text">
-            <p>INFORMAÇÕES, MÉTODOS E VALORES DE TROCA</p>
-        </div>
+            <div class="center">
+                <div class="cards">
+                    <img class="card1" src="images/card.png" alt="">
+                    <img class="card2" src="images/card.png" alt="">
+                    <img class="card3" src="images/card.png" alt="">
+                </div>
+                <div class="hand">
+                    <img src="images/hands.png" alt="hands">
+                    <div class="stars">
+            
+                    </div>
+                </div>
+            </div>
+            <div class="text">
+                <p>INFORMAÇÕES, MÉTODOS E VALORES DE TROCA</p>
+            </div>
+        </article>
     </main>
     <script>
         const ul = document.querySelector('ul');
@@ -48,12 +55,9 @@
     
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
-            if (ul.style.left === '50%') {
-                ul.style.left = '100%';
-            } else {
-                ul.style.left = '50%';
-            }
+            ul.style.left = ul.style.left === '50%' ? '100%' : '50%';
         });
+
     </script>
 </body>
 </html>
