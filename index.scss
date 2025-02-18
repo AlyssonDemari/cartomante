@@ -2,9 +2,11 @@
 
 body{
     height: 100vh;
+    overflow-x: hidden;
 }
 main{
     background: $bg no-repeat;
+    margin-top: 10vh;
 }
 
 header{
@@ -14,6 +16,9 @@ header{
     height: 10vh;
     width: 100%;
     font-family: $font-escri;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
 
     nav{
         @include flex-center;
@@ -48,9 +53,6 @@ header{
             @include flex-center;
 
             li{
-                font-size: 2rem;
-                margin: 0 20px;
-                font-family: $font-escri;
                 border-radius: 20px;
                 padding: 5px 10px;
                 border: 2px solid #FFF;
@@ -58,6 +60,12 @@ header{
 
                 &:hover{
                     @include button();
+                }
+
+                a{
+                    font-size: 2rem;
+                    margin: 0 20px;
+                    font-family: $font-escri;
                 }
             }
         }
@@ -113,7 +121,7 @@ header{
         align-self: self-end;
     }
 }
-.second{
+#second, #second, #third, #fourth{
     @include flex-center;
     flex-direction: column;
     height: 100vh;
@@ -124,20 +132,53 @@ header{
     }
 
     p{
-        width: 60%;
+        width: 50%;
         margin: 50px;
         font-size: 3rem;
         color: $white;
     }
 
     img{
-        width: 40%;
+        width: 30%;
     }
 
     .page{
         @include flex-center;
     }
 }
+
+#fifth{
+    @include flex-center;
+    flex-direction: column;
+    height: 90vh;
+    margin-top: 10vh;
+
+    h1{
+        font-size: 5rem;
+        color: $white;
+    }
+
+    p{
+        width: 900px;
+        margin: 50px;
+        font-size: 3rem;
+        color: $white;
+    }
+
+    img{
+        width: 60%;
+    }
+
+    .page{
+        @include flex-center;
+    }
+}
+
+footer{
+    background-color: aqua;
+    width: 100vw;
+}
+
 
 @keyframes giro{
     0% {
@@ -168,13 +209,16 @@ header{
 @media (min-width: 320px) and (max-width: 680px) {
     header{
         @include hamburger(block);
+        position: fixed;
+        top: 0px;
+        z-index: 2;
 
         nav{
             @include flex-center;
             justify-content: space-between;
             padding:0px 20px 0px 0px;
             width: 100%;
-            z-index: 2;
+            z-index: 1;
 
             ul{
                 position: absolute;
@@ -187,14 +231,24 @@ header{
                 flex-direction: column;
                 width: 50%;
                 transition: all 1s;
+                text-align: center;
 
                 li{
+                    @include flex-center;
                     text-align: center;
-                    font-size: 1.2rem;
+                    a{
+                        text-align: center;
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
     }
+
+    main{
+        margin-top: 10vh;
+    }
+
 
     .first{
         @include flex-center;
@@ -248,22 +302,24 @@ header{
         }        
     }
 
-    #second{
+    #second, #third, #fourth, #fifth{
         @include flex-center;
         flex-direction: column;
         height: 100vh;
+        margin-top: 10vh;
 
     
         h1{
             font-size: 2rem;
             color: $white;
+            text-align: center;
         }
     
         p{
             width: 90%;
             height: 90%;
             text-align: center;
-            line-height: 60px;
+            line-height: 40px;
             margin: 0px;
             font-size: 1.5rem;
             color: $white;
@@ -271,7 +327,7 @@ header{
     
         img{
             width: 100%;
-            height: 90%;
+            height: 60%;
             opacity: 0.1;
             // display: none;
             position: absolute;

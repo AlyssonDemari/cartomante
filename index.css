@@ -12,10 +12,12 @@
 
 body {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
   background: linear-gradient(45deg, #26003f, #000000, #000000) no-repeat;
+  margin-top: 10vh;
 }
 
 header {
@@ -26,6 +28,9 @@ header {
   height: 10vh;
   width: 100%;
   font-family: "Nixie One", cursive;
+  position: fixed;
+  top: 0px;
+  z-index: 2;
 }
 header .hamburger {
   flex-direction: column;
@@ -150,9 +155,6 @@ header nav ul {
   justify-content: center;
 }
 header nav ul li {
-  font-size: 2rem;
-  margin: 0 20px;
-  font-family: "Nixie One", cursive;
   border-radius: 20px;
   padding: 5px 10px;
   border: 2px solid #FFF;
@@ -164,6 +166,11 @@ header nav ul li:hover {
   padding: 5px 10px;
   transition: all 1s;
   cursor: pointer;
+}
+header nav ul li a {
+  font-size: 2rem;
+  margin: 0 20px;
+  font-family: "Nixie One", cursive;
 }
 
 .first {
@@ -213,30 +220,62 @@ header nav ul li:hover {
   align-self: self-end;
 }
 
-.second {
+#second, #second, #third, #fourth {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
 }
-.second h1 {
+#second h1, #second h1, #third h1, #fourth h1 {
   font-size: 5rem;
   color: #FFF;
 }
-.second p {
-  width: 60%;
+#second p, #second p, #third p, #fourth p {
+  width: 50%;
   margin: 50px;
   font-size: 3rem;
   color: #FFF;
 }
-.second img {
-  width: 40%;
+#second img, #second img, #third img, #fourth img {
+  width: 30%;
 }
-.second .page {
+#second .page, #second .page, #third .page, #fourth .page {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#fifth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  margin-top: 10vh;
+}
+#fifth h1 {
+  font-size: 5rem;
+  color: #FFF;
+}
+#fifth p {
+  width: 900px;
+  margin: 50px;
+  font-size: 3rem;
+  color: #FFF;
+}
+#fifth img {
+  width: 60%;
+}
+#fifth .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: aqua;
+  width: 100vw;
 }
 
 @keyframes giro {
@@ -264,6 +303,11 @@ header nav ul li:hover {
   }
 }
 @media (min-width: 320px) and (max-width: 680px) {
+  header {
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+  }
   header .hamburger {
     flex-direction: column;
     cursor: pointer;
@@ -357,7 +401,7 @@ header nav ul li:hover {
     justify-content: space-between;
     padding: 0px 20px 0px 0px;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
   }
   header nav ul {
     position: absolute;
@@ -370,10 +414,20 @@ header nav ul li:hover {
     flex-direction: column;
     width: 50%;
     transition: all 1s;
+    text-align: center;
   }
   header nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-size: 1.2rem;
+  }
+  header nav ul li a {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  main {
+    margin-top: 10vh;
   }
   .first {
     display: flex;
@@ -426,33 +480,35 @@ header nav ul li:hover {
     text-align: center;
     width: 100%;
   }
-  #second {
+  #second, #third, #fourth, #fifth {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    margin-top: 10vh;
   }
-  #second h1 {
+  #second h1, #third h1, #fourth h1, #fifth h1 {
     font-size: 2rem;
     color: #FFF;
+    text-align: center;
   }
-  #second p {
+  #second p, #third p, #fourth p, #fifth p {
     width: 90%;
     height: 90%;
     text-align: center;
-    line-height: 60px;
+    line-height: 40px;
     margin: 0px;
     font-size: 1.5rem;
     color: #FFF;
   }
-  #second img {
+  #second img, #third img, #fourth img, #fifth img {
     width: 100%;
-    height: 90%;
+    height: 60%;
     opacity: 0.1;
     position: absolute;
   }
-  #second .page {
+  #second .page, #third .page, #fourth .page, #fifth .page {
     display: flex;
     align-items: center;
     justify-content: center;
