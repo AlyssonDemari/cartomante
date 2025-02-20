@@ -1,5 +1,9 @@
 @import "_standardy.scss";
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     height: 100vh;
     overflow-x: hidden;
@@ -46,26 +50,30 @@ header{
             &:hover{
                 @include button();
             }
-
         }
 
         ul{
             @include flex-center;
 
             li{
-                border-radius: 20px;
-                padding: 5px 10px;
-                border: 2px solid #FFF;
-                transition: all 1s;
-
-                &:hover{
-                    @include button();
-                }
-
                 a{
+                    border-radius: 20px;
+                    align-items: center;
+                    padding: 5px 10px;
+                    border: 2px solid #ffffff;
                     font-size: 2rem;
                     margin: 0 20px;
                     font-family: $font-escri;
+                    color: black;
+                    transition: all 1s;
+
+                    i{
+                        font-size: 35px;
+                    }
+
+                    &:hover{
+                        @include button();
+                    }
                 }
             }
         }
@@ -106,8 +114,8 @@ header{
     .text, .welcome{
         margin: 50px;
         p{
-            font-size: 2.5rem;
-            width: 450px;
+            font-size: 3rem;
+            width: 550px;
             color: #FFF;
             text-align: center;
         }

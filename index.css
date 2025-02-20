@@ -10,6 +10,10 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   overflow-x: hidden;
@@ -154,23 +158,26 @@ header nav ul {
   align-items: center;
   justify-content: center;
 }
-header nav ul li {
+header nav ul li a {
   border-radius: 20px;
+  align-items: center;
   padding: 5px 10px;
-  border: 2px solid #FFF;
+  border: 2px solid #ffffff;
+  font-size: 2rem;
+  margin: 0 20px;
+  font-family: "Nixie One", cursive;
+  color: black;
   transition: all 1s;
 }
-header nav ul li:hover {
+header nav ul li a i {
+  font-size: 35px;
+}
+header nav ul li a:hover {
   border: 2px solid #26003f;
   border-radius: 20px;
   padding: 5px 10px;
   transition: all 1s;
   cursor: pointer;
-}
-header nav ul li a {
-  font-size: 2rem;
-  margin: 0 20px;
-  font-family: "Nixie One", cursive;
 }
 
 .first {
@@ -208,8 +215,8 @@ header nav ul li a {
   margin: 50px;
 }
 .first .text p, .first .welcome p {
-  font-size: 2.5rem;
-  width: 450px;
+  font-size: 3rem;
+  width: 550px;
   color: #FFF;
   text-align: center;
 }
